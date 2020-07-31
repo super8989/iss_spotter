@@ -6,12 +6,14 @@ const {
 	printPassTimes,
 } = require('./iss_promised');
 
-nextISSTimesForMyLocation().then((body) => {
-	printPassTimes(body);
-});
-// .catch((error) => {
-// 	console.log(`It didn't work:`, error.message);
-// });
+nextISSTimesForMyLocation()
+	.then((body) => {
+		printPassTimes(body);
+		// pass the array to the function to print
+	})
+	.catch((error) => {
+		console.log(`It didn't work:`, error.message);
+	});
 
 // fetchMyIP()
 // 	.then(fetchCoordsByIP)

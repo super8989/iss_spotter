@@ -41,6 +41,7 @@ const nextISSTimesForMyLocation = () => {
 		.then((data) => {
 			const { response } = JSON.parse(data);
 			return response;
+			// array of objects with flyover times
 		});
 };
 
